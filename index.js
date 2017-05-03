@@ -5,7 +5,7 @@ var BearerStrategy = require('passport-azure-ad').BearerStrategy;
 
 var options = {
     // The URL of the metadata document for your app. We will put the keys for token validation from the URL found in the jwks_uri tag of the in the metadata.
-    identityMetadata: "https://login.microsoftonline.com/common/.well-known/openid-configuration/",
+    identityMetadata: "https://login.microsoftonline.com/common/v2.0/.well-known/openid-configuration/",
     clientID: "YOUR_CLIENT_ID", // Replace with your Client ID
     validateIssuer: false,
     loggingLevel: 'warn',
