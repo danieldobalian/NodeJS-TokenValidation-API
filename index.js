@@ -43,14 +43,8 @@ app.get("/api/claims",
         var claims = req.authInfo;
         console.log('User info: ', req.user);
         console.log('Validated claims: ', claims);
-        var claimsList = Object.keys(claims)
-            .reduce(function (previous, key) {
-                return previous.concat({
-                    type: key,
-                    value: claims[key]
-                });
-            }, []);
-        res.status(200).json(claimsList);
+    
+        res.status(200).json({'name': claims['name']});
     }
 );
 
